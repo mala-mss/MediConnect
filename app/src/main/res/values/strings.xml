@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MediConnect</string>
+    <string name="tagline">Your Health, Our Priority</string>
+    <string name="get_started">Get Started →</string>
+    <string name="find_your_doctor">Find Your Doctor</string>
+    <string name="search_hint">Search doctors, specialities…</string>
+    <string name="categories">Categories</string>
+    <string name="top_doctors">Top Doctors</string>
+    <string name="see_all">See all →</string>
+    <string name="see_details">see details</string>
+    <string name="all_specialities">All Specialities</string>
+    <string name="doctor_details">Doctor Details</string>
+    <string name="favorite_doctors">Favorite Doctors</string>
+    <string name="about">About</string>
+    <string name="contact">Contact</string>
+    <string name="call">call</string>
+    <string name="email">email</string>
+    <string name="facebook">facebook</string>
+    <string name="years_exp">Years Exp.</string>
+    <string name="patients">Patients</string>
+    <string name="rating">Rating</string>
+    <string name="verified">Verified ✓</string>
+    <string name="search_specialty">Search specialty…</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="favorite">Favorite</string>
+    <string name="profile">Profile</string>
+</resources>

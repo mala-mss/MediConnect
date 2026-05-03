@@ -1,0 +1,19 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+  <!-- Circle background -->
+  <path
+      android:fillColor="#FFFFFF"
+      android:fillAlpha="0.2"
+      android:pathData="M50,10 A40,40 0 1,1 49.99,10 Z"/>
+  <!-- Stethoscope shape simplified -->
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="M35,25 C35,25 25,25 25,35 L25,55 C25,65 35,70 40,70 C45,70 50,67 52,62 L52,58 C58,58 65,52 65,45 C65,38 60,33 53,33 C53,33 53,28 48,28 C43,28 43,33 43,33 L43,55 C43,60 40,62 37,62 C34,62 31,60 31,55 L31,35 C31,30 35,29 35,25 Z"/>
+  <!-- Small circle at bottom of stethoscope -->
+  <path
+      android:fillColor="#4CAF82"
+      android:pathData="M53,38 A7,7 0 1,1 52.99,38 Z"/>
+</vector>

@@ -57,13 +57,13 @@
             android:orientation="vertical"
             android:gravity="center">
 
-            <TextView
-                android:id="@+id/tvDoctorAvatar"
+            <ImageView
+                android:id="@+id/ivDoctorAvatar"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/bg_avatar"
-                android:gravity="center"
-                android:textSize="42sp"
+                android:scaleType="centerCrop"
+                android:clipToOutline="true"
                 android:layout_marginBottom="12dp"/>
 
             <TextView

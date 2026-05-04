@@ -29,7 +29,7 @@ class DoctorDetailsActivity : AppCompatActivity() {
 
         doctor?.let { doc ->
             // Populate UI
-            binding.tvDoctorAvatar.text = doc.emoji
+            binding.ivDoctorAvatar.setImageResource(doc.imageRes)
             binding.tvDoctorName.text = doc.name
             binding.tvSpeciality.text = doc.speciality
             binding.tvYearsExp.text = doc.yearsExp

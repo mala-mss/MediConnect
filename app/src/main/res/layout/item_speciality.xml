@@ -4,48 +4,55 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="6dp"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="3dp"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp"
     app:cardBackgroundColor="@color/white">
 
     <LinearLayout
+        android:id="@+id/contentLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center"
-        android:padding="16dp">
+        android:gravity="center_horizontal">
 
-        <!-- Icon -->
-        <TextView
-            android:id="@+id/tvIcon"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:background="@drawable/bg_avatar"
-            android:gravity="center"
-            android:textSize="24sp"
-            android:layout_marginBottom="10dp"/>
+        <!-- Top Image Area -->
+        <FrameLayout
+            android:id="@+id/iconContainer"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_avatar">
 
-        <!-- Name -->
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cardiology"/>
+        </FrameLayout>
+
+        <!-- Small Text Label -->
         <TextView
             android:id="@+id/tvSpecialityName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/text_dark"
-            android:textSize="13sp"
+            android:textSize="12sp"
             android:fontFamily="sans-serif-medium"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
             android:gravity="center"
             android:text="Cardiology"/>
 
-        <!-- Count -->
+        <!-- Hidden count to keep data but match 3-column compact look -->
         <TextView
             android:id="@+id/tvDoctorCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/text_light"
-            android:textSize="11sp"
-            android:layout_marginTop="2dp"
-            android:text="12 doctors"/>
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"/>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -6,6 +6,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import com.mediconnect.R
 import com.mediconnect.adapter.SpecialityAdapter
 import com.mediconnect.data.model.SampleData
 import com.mediconnect.data.model.Speciality
@@ -13,6 +14,7 @@ import com.mediconnect.databinding.ActivitySpecialitiesBinding
 import com.mediconnect.ui.categories.CategoriesActivity
 import com.mediconnect.ui.favorites.FavoritesActivity
 import com.mediconnect.ui.home.HomeActivity
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 
 class SpecialitiesActivity : AppCompatActivity() {
 
@@ -25,9 +27,24 @@ class SpecialitiesActivity : AppCompatActivity() {
         binding = ActivitySpecialitiesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupBottomNavigation()
         setupRecyclerView()
         setupSearch()
         setupClickListeners()
+    }
+
+    private fun setupBottomNavigation() {
+        // Highlight Search
+        binding.includeNavigation.ivSearch.setColorFilter(getColor(R.color.primary_green))
+        binding.includeNavigation.tvSearch.setTextColor(getColor(R.color.primary_green))
+        
+        // Others grey
+        binding.includeNavigation.ivHome.setColorFilter(getColor(R.color.text_light))
+        binding.includeNavigation.tvHome.setTextColor(getColor(R.color.text_light))
+        binding.includeNavigation.ivFavorite.setColorFilter(getColor(R.color.text_light))
+        binding.includeNavigation.tvFavorite.setTextColor(getColor(R.color.text_light))
+        binding.includeNavigation.ivProfile.setColorFilter(getColor(R.color.text_light))
+        binding.includeNavigation.tvProfile.setTextColor(getColor(R.color.text_light))
     }
 
     private fun setupRecyclerView() {
@@ -37,7 +54,7 @@ class SpecialitiesActivity : AppCompatActivity() {
         )
 
         binding.rvSpecialities.apply {
-            layoutManager = GridLayoutManager(this@SpecialitiesActivity, 2)
+            layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
             adapter = specialityAdapter
         }
     }
@@ -58,6 +75,7 @@ class SpecialitiesActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {}
         })
     }
+
 
     private fun setupClickListeners() {
         binding.btnBack.setOnClickListener { finish() }

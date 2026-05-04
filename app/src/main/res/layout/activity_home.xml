@@ -42,13 +42,13 @@
                         android:textSize="22sp"
                         android:fontFamily="sans-serif-medium"/>
 
-                    <TextView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:text="⚕"
-                        android:textSize="20sp"
-                        android:gravity="center"
-                        android:background="@drawable/bg_avatar"/>
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/logo"
+                        android:scaleType="fitCenter"
+                        android:background="@drawable/bg_avatar"
+                        android:padding="4dp"/>
                 </LinearLayout>
 
                 <!-- Search bar -->
@@ -116,52 +116,142 @@
                 </LinearLayout>
 
                 <!-- Category chips -->
-                <LinearLayout
+                <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:scrollbars="none">
 
-                    <TextView
-                        android:id="@+id/chipCardiologist"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cardiologist"
-                        android:background="@drawable/bg_see_details"
-                        android:textColor="#FFFFFF"
-                        android:textSize="12sp"
-                        android:paddingStart="14dp"
-                        android:paddingEnd="14dp"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="8dp"
-                        android:layout_marginEnd="8dp"/>
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/chipDermatologist"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Dermatologist"
-                        android:background="@drawable/bg_chip"
-                        android:textColor="@color/primary_green"
-                        android:textSize="12sp"
-                        android:paddingStart="14dp"
-                        android:paddingEnd="14dp"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="8dp"
-                        android:layout_marginEnd="8dp"/>
+                        <TextView
+                            android:id="@+id/chipAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="All"
+                            android:background="@drawable/bg_see_details"
+                            android:textColor="#FFFFFF"
+                            android:textSize="12sp"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:layout_marginEnd="8dp"/>
 
-                    <TextView
-                        android:id="@+id/chipNeurologist"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Neurologist"
-                        android:background="@drawable/bg_chip"
-                        android:textColor="@color/primary_green"
-                        android:textSize="12sp"
-                        android:paddingStart="14dp"
-                        android:paddingEnd="14dp"
-                        android:paddingTop="8dp"
-                        android:paddingBottom="8dp"/>
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/chipCardiologist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cardiologist"
+                            android:background="@drawable/bg_chip"
+                            android:textColor="@color/primary_green"
+                            android:textSize="12sp"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:id="@+id/chipNeurologist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Neurologist"
+                            android:background="@drawable/bg_chip"
+                            android:textColor="@color/primary_green"
+                            android:textSize="12sp"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:id="@+id/chipRadiologist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Radiologist"
+                            android:background="@drawable/bg_chip"
+                            android:textColor="@color/primary_green"
+                            android:textSize="12sp"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:id="@+id/chipDentist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dentist"
+                            android:background="@drawable/bg_chip"
+                            android:textColor="@color/primary_green"
+                            android:textSize="12sp"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:id="@+id/chipOrthopedic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Orthopedic"
+                            android:background="@drawable/bg_chip"
+                            android:textColor="@color/primary_green"
+                            android:textSize="12sp"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:id="@+id/chipOphthalmologist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ophthalmologist"
+                            android:background="@drawable/bg_chip"
+                            android:textColor="@color/primary_green"
+                            android:textSize="12sp"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:id="@+id/chipGastroenterologist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gastroenterologist"
+                            android:background="@drawable/bg_chip"
+                            android:textColor="@color/primary_green"
+                            android:textSize="12sp"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:layout_marginEnd="8dp"/>
+
+                        <TextView
+                            android:id="@+id/chipPediatrics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pediatrics"
+                            android:background="@drawable/bg_chip"
+                            android:textColor="@color/primary_green"
+                            android:textSize="12sp"
+                            android:paddingStart="14dp"
+                            android:paddingEnd="14dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"/>
+                    </LinearLayout>
+                </HorizontalScrollView>
             </LinearLayout>
 
             <!-- Top Doctors Section -->
@@ -210,59 +300,11 @@
     </androidx.core.widget.NestedScrollView>
 
     <!-- Bottom Navigation -->
-    <LinearLayout
+    <include
+        android:id="@+id/includeNavigation"
+        layout="@layout/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:background="@color/white"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:elevation="8dp"
-        android:layout_gravity="bottom">
-
-        <LinearLayout
-            android:id="@+id/navHome"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
-            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_home"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Home" android:textColor="@color/primary_green" android:textSize="10sp" android:layout_marginTop="2dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/navSearch"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
-            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_search"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Search" android:textColor="@color/text_light" android:textSize="10sp" android:layout_marginTop="2dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/navFavorite"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
-            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_favorite"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Favorite" android:textColor="@color/text_light" android:textSize="10sp" android:layout_marginTop="2dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/navProfile"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
-            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_person"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Profile" android:textColor="@color/text_light" android:textSize="10sp" android:layout_marginTop="2dp"/>
-        </LinearLayout>
-
-    </LinearLayout>
+        android:layout_gravity="bottom"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

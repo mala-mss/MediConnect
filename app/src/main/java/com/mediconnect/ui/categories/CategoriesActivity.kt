@@ -13,19 +13,43 @@ import com.mediconnect.ui.favorites.FavoritesActivity
 import com.mediconnect.ui.home.HomeActivity
 import com.mediconnect.ui.specialities.SpecialitiesActivity
 
+import com.mediconnect.R
+import android.graphics.drawable.GradientDrawable
+import android.widget.TextView
+import androidx.core.content.ContextCompat
+
 class CategoriesActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCategoriesBinding
     private lateinit var doctorAdapter: DoctorAdapter
     private var allDoctors = SampleData.doctors.toList()
+    private var chipList = listOf<TextView>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCategoriesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupChipList()
         setupRecyclerView()
         setupClickListeners()
+        
+        // Default select "All"
+        selectChip(binding.chipAll, ContextCompat.getColor(this, R.color.primary_green))
+    }
+
+    private fun setupChipList() {
+        chipList = listOf(
+            binding.chipAll,
+            binding.chipCardiologist,
+            binding.chipNeurologist,
+            binding.chipRadiologist,
+            binding.chipDentist,
+            binding.chipOrthopedic,
+            binding.chipOphthalmologist,
+            binding.chipGastroenterologist,
+            binding.chipPediatrics
+        )
     }
 
     private fun setupRecyclerView() {
@@ -46,18 +70,47 @@ class CategoriesActivity : AppCompatActivity() {
 
         binding.chipAll.setOnClickListener {
             doctorAdapter.updateDoctors(allDoctors)
+            selectChip(it as TextView, ContextCompat.getColor(this, R.color.primary_green))
         }
 
         binding.chipCardiologist.setOnClickListener {
             filterBy("Cardiologist")
+            selectChip(it as TextView, SampleData.specialities.find { s -> s.name == "Cardiology" }?.bgColor ?: 0)
         }
 
         binding.chipNeurologist.setOnClickListener {
             filterBy("Neurologist")
+            selectChip(it as TextView, SampleData.specialities.find { s -> s.name == "Neurology" }?.bgColor ?: 0)
+        }
+
+        binding.chipRadiologist.setOnClickListener {
+            filterBy("Radiologist")
+            selectChip(it as TextView, SampleData.specialities.find { s -> s.name == "Radiology" }?.bgColor ?: 0)
         }
 
         binding.chipDentist.setOnClickListener {
             filterBy("Dentist")
+            selectChip(it as TextView, SampleData.specialities.find { s -> s.name == "Dentistry" }?.bgColor ?: 0)
+        }
+
+        binding.chipOrthopedic.setOnClickListener {
+            filterBy("Orthopedic")
+            selectChip(it as TextView, SampleData.specialities.find { s -> s.name == "Orthopedics" }?.bgColor ?: 0)
+        }
+
+        binding.chipOphthalmologist.setOnClickListener {
+            filterBy("Ophthalmologist")
+            selectChip(it as TextView, SampleData.specialities.find { s -> s.name == "Ophthalmology" }?.bgColor ?: 0)
+        }
+
+        binding.chipGastroenterologist.setOnClickListener {
+            filterBy("Gastroenterologist")
+            selectChip(it as TextView, SampleData.specialities.find { s -> s.name == "Gastroenterology" }?.bgColor ?: 0)
+        }
+
+        binding.chipPediatrics.setOnClickListener {
+            filterBy("Pediatrics")
+            selectChip(it as TextView, SampleData.specialities.find { s -> s.name == "Pediatrics" }?.bgColor ?: 0)
         }
 
         // Bottom nav
@@ -73,6 +126,31 @@ class CategoriesActivity : AppCompatActivity() {
         binding.includeNavigation.navFavorite.setOnClickListener {
             startActivity(Intent(this, FavoritesActivity::class.java))
         }
+    }
+
+    private fun selectChip(selectedChip: TextView, color: Int) {
+        // Reset all chips
+        chipList.forEach { chip ->
+            val drawable = GradientDrawable().apply {
+                shape = GradientDrawable.RECTANGLE
+                cornerRadius = 30f * resources.displayMetrics.density
+                setColor(ContextCompat.getColor(this@CategoriesActivity, R.color.background))
+                setStroke(1, ContextCompat.getColor(this@CategoriesActivity, R.color.text_light))
+            }
+            chip.background = drawable
+            chip.setTextColor(ContextCompat.getColor(this, R.color.text_light))
+        }
+
+        // Highlight selected chip
+        val selectedDrawable = GradientDrawable().apply {
+            shape = GradientDrawable.RECTANGLE
+            cornerRadius = 30f * resources.displayMetrics.density
+            setColor(color)
+        }
+        selectedChip.background = selectedDrawable
+        
+        // Set text color (white for better contrast if background is colored)
+        selectedChip.setTextColor(ContextCompat.getColor(this, R.color.white))
     }
 
     private fun filterBy(speciality: String) {

@@ -34,13 +34,13 @@
             android:textSize="20sp"
             android:fontFamily="sans-serif-medium"/>
 
-        <TextView
+        <ImageView
             android:layout_width="36dp"
             android:layout_height="36dp"
-            android:text="⚕"
-            android:textSize="18sp"
-            android:gravity="center"
-            android:background="@drawable/bg_avatar"/>
+            android:src="@drawable/logo"
+            android:scaleType="fitCenter"
+            android:background="@drawable/bg_avatar"
+            android:padding="4dp"/>
     </LinearLayout>
 
     <!-- Favorites RecyclerView -->

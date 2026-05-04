@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.mediconnect.R
 import com.mediconnect.adapter.DoctorAdapter
 import com.mediconnect.data.model.Doctor
 import com.mediconnect.data.model.SampleData
@@ -22,8 +23,23 @@ class FavoritesActivity : AppCompatActivity() {
         binding = ActivityFavoritesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupBottomNavigation()
         setupRecyclerView()
         setupClickListeners()
+    }
+
+    private fun setupBottomNavigation() {
+        // Highlight Favorite
+        binding.includeNavigation.ivFavorite.setColorFilter(getColor(R.color.primary_green))
+        binding.includeNavigation.tvFavorite.setTextColor(getColor(R.color.primary_green))
+        
+        // Others grey
+        binding.includeNavigation.ivHome.setColorFilter(getColor(R.color.text_light))
+        binding.includeNavigation.tvHome.setTextColor(getColor(R.color.text_light))
+        binding.includeNavigation.ivSearch.setColorFilter(getColor(R.color.text_light))
+        binding.includeNavigation.tvSearch.setTextColor(getColor(R.color.text_light))
+        binding.includeNavigation.ivProfile.setColorFilter(getColor(R.color.text_light))
+        binding.includeNavigation.tvProfile.setTextColor(getColor(R.color.text_light))
     }
 
     private fun setupRecyclerView() {

@@ -7,27 +7,46 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_splash">
 
-    <!-- Decorative circle top right -->
+    <!-- Bubbly circles -->
     <View
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:background="#20FFFFFF"
-        android:layout_marginTop="-60dp"
-        android:layout_marginEnd="-60dp"
+        android:id="@+id/bubble1"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:background="@drawable/bg_circle_white"
+        android:layout_marginTop="-40dp"
+        android:layout_marginEnd="-40dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:id="@+id/circleTopRight"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Decorative circle top right small -->
     <View
+        android:id="@+id/bubble2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/bg_circle_white"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/bubble3"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:background="#15FFFFFF"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:id="@+id/circleTopRightSmall"/>
+        android:background="@drawable/bg_circle_white"
+        android:layout_marginStart="-30dp"
+        android:layout_marginBottom="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/bubble4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_circle_white"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Logo + brand center -->
     <LinearLayout
@@ -41,16 +60,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Logo icon -->
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/bg_avatar"
-            android:gravity="center"
-            android:text="💊"
-            android:textSize="40sp"
+        <!-- Logo image replacing the pill icon -->
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/logo"
             android:layout_gravity="center"
-            android:layout_marginBottom="24dp"/>
+            android:layout_marginBottom="24dp"
+            android:scaleType="fitCenter"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -72,8 +90,8 @@
             android:layout_gravity="center"/>
     </LinearLayout>
 
-    <!-- Get Started button -->
-    <Button
+    <!-- Get Started Container -->
+    <FrameLayout
         android:id="@+id/btnGetStarted"
         android:layout_width="0dp"
         android:layout_height="56dp"
@@ -81,22 +99,20 @@
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="60dp"
         android:background="@drawable/bg_button_white"
-        android:text="Get Started →"
-        android:textColor="@color/primary_green"
-        android:textSize="16sp"
-        android:fontFamily="sans-serif-medium"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <!-- Bottom decorative circle -->
-    <View
-        android:layout_width="178dp"
-        android:layout_height="220dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="4dp"
-        android:background="#15FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Get Started →"
+            android:textColor="@color/primary_green"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"/>
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

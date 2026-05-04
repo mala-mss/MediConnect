@@ -1,105 +1,158 @@
 package com.mediconnect.data.model
 
 import android.graphics.Color
+import com.mediconnect.R
 
 object SampleData {
 
     val doctors = mutableListOf(
+
+        // Cardiology
         Doctor(
             id = 1,
-            name = "Dr. Sarah Ahmed",
+            name = "Dr. Cherifi Lotfi",
             speciality = "Cardiologist",
-            experience = "8 yrs exp",
-            rating = 4.9f,
-            patients = "1.2k",
-            yearsExp = "8+",
-            phone = "+1 234 567 8901",
-            email = "sarah@mediconnect.com",
-            about = "Dr. Sarah Ahmed is a board-certified cardiologist with 8+ years of experience. Specializing in cardiovascular diseases and preventive cardiology.",
-            emoji = "👩‍⚕️",
-            isFavorite = true
+            experience = "",
+            rating = 0f,
+            patients = "",
+            yearsExp = "",
+            phone = "+213 31 50 11 78",
+            email = "",
+            about = "Cardiologist in Mila focusing on diagnosis and management of cardiovascular diseases.",    
+            emoji = "?????",
+            imageRes = R.drawable.dr_cherifi_lotfi,
+            isFavorite = false
         ),
+
+        // Neurology
         Doctor(
             id = 2,
-            name = "Dr. Omar Hassan",
+            name = "Dr. Bensalem Nadia",
             speciality = "Neurologist",
-            experience = "12 yrs exp",
-            rating = 4.8f,
-            patients = "2.1k",
-            yearsExp = "12+",
-            phone = "+1 234 567 8902",
-            email = "omar@mediconnect.com",
-            about = "Dr. Omar Hassan is a renowned neurologist specializing in brain disorders, epilepsy, and stroke management with over 12 years in practice.",
-            emoji = "👨‍⚕️",
+            experience = "",
+            rating = 0f,
+            patients = "",
+            yearsExp = "",
+            phone = "+213 31 50 44 21",
+            email = "",
+            about = "Neurologist dealing with disorders of the nervous system.",
+            emoji = "?????",
+            imageRes = R.drawable.dr_bensalem_nadia,
             isFavorite = false
         ),
+
+        // Radiology
         Doctor(
             id = 3,
-            name = "Dr. Lina Khalid",
-            speciality = "Dentist",
-            experience = "5 yrs exp",
-            rating = 4.7f,
-            patients = "800",
-            yearsExp = "5+",
-            phone = "+1 234 567 8903",
-            email = "lina@mediconnect.com",
-            about = "Dr. Lina Khalid is a skilled dentist specializing in cosmetic dentistry and orthodontics, helping patients achieve beautiful, healthy smiles.",
-            emoji = "👩‍⚕️",
-            isFavorite = true
+            name = "Dr. Hamdani Mourad",
+            speciality = "Radiologist",
+            experience = "",
+            rating = 0f,
+            patients = "",
+            yearsExp = "",
+            phone = "+213 31 50 89 33",
+            email = "",
+            about = "Radiologist specializing in imaging techniques such as X-rays and scans.",
+            emoji = "?????",
+            imageRes = R.drawable.dr_hamdani_mourad,
+            isFavorite = false
         ),
+
+        // Dentistry
         Doctor(
             id = 4,
-            name = "Dr. Karim Nour",
-            speciality = "Orthopedic",
-            experience = "10 yrs exp",
-            rating = 4.6f,
-            patients = "1.5k",
-            yearsExp = "10+",
-            phone = "+1 234 567 8904",
-            email = "karim@mediconnect.com",
-            about = "Dr. Karim Nour specializes in orthopedic surgery and sports medicine, treating bone, joint, and muscle conditions.",
-            emoji = "👨‍⚕️",
+            name = "Dr. Saidi Samira",
+            speciality = "Dentist",
+            experience = "",
+            rating = 0f,
+            patients = "",
+            yearsExp = "",
+            phone = "+213 31 50 67 12",
+            email = "",
+            about = "Dentist providing oral health care and cosmetic dental treatments.",
+            emoji = "?????",
+            imageRes = R.drawable.dr_saidi_samira,
             isFavorite = false
         ),
+
+        // Orthopedics
         Doctor(
             id = 5,
-            name = "Dr. Moussa Belaid",
-            speciality = "Dermatologist",
-            experience = "7 yrs exp",
-            rating = 4.5f,
-            patients = "900",
-            yearsExp = "7+",
-            phone = "+1 234 567 8905",
-            email = "moussa@mediconnect.com",
-            about = "Dr. Moussa Belaid is an experienced dermatologist treating skin conditions from acne to complex dermatological disorders.",
-            emoji = "👨‍⚕️",
+            name = "Dr. Bougherara Abdelhak",
+            speciality = "Orthopedic",
+            experience = "",
+            rating = 0f,
+            patients = "",
+            yearsExp = "",
+            phone = "+213 31 50 23 45",
+            email = "",
+            about = "Orthopedic specialist treating bone and joint conditions.",
+            emoji = "?????",
+            imageRes = R.drawable.dr_bougherara_abdelhak,
             isFavorite = false
         ),
+
+        // Ophthalmology
         Doctor(
             id = 6,
-            name = "Dr. Bensam Ali",
-            speciality = "Cardiologist",
-            experience = "15 yrs exp",
-            rating = 4.9f,
-            patients = "3k",
-            yearsExp = "15+",
-            phone = "+1 234 567 8906",
-            email = "bensam@mediconnect.com",
-            about = "Dr. Bensam Ali is a senior cardiologist with extensive expertise in interventional cardiology and heart failure management.",
-            emoji = "👨‍⚕️",
+            name = "Dr. Meziane Farida",
+            speciality = "Ophthalmologist",
+            experience = "",
+            rating = 0f,
+            patients = "",
+            yearsExp = "",
+            phone = "+213 31 50 55 90",
+            email = "",
+            about = "Eye specialist managing vision and ocular diseases.",
+            emoji = "?????",
+            imageRes = R.drawable.dr_meziane_farida,
+            isFavorite = false
+        ),
+
+        // Gastroenterology
+        Doctor(
+            id = 7,
+            name = "Dr. Khelifi Rachid",
+            speciality = "Gastroenterologist",
+            experience = "",
+            rating = 0f,
+            patients = "",
+            yearsExp = "",
+            phone = "+213 31 50 72 18",
+            email = "",
+            about = "Specialist in digestive system disorders and treatments.",
+            emoji = "?????",
+            imageRes = R.drawable.dr_khelifi_rachid,
+            isFavorite = false
+        ),
+
+        // Pediatrics
+        Doctor(
+            id = 8,
+            name = "Dr. Amrani Lina",
+            speciality = "Pediatrics",
+            experience = "",
+            rating = 0f,
+            patients = "",
+            yearsExp = "",
+            phone = "+213 31 50 38 66",
+            email = "",
+            about = "Pediatrician providing healthcare for infants and children.",
+            emoji = "?????",
+            imageRes = R.drawable.dr_amrani_lina,
             isFavorite = false
         )
     )
 
     val specialities = listOf(
-        Speciality(1, "Cardiology", 12, "❤️", Color.parseColor("#FFEBEE")),
-        Speciality(2, "Neurology", 8, "🧠", Color.parseColor("#F3E5F5")),
-        Speciality(3, "Radiology", 11, "🩻", Color.parseColor("#E3F2FD")),
-        Speciality(4, "Dentistry", 15, "🦷", Color.parseColor("#FFF8E1")),
-        Speciality(5, "Orthopedics", 9, "🦴", Color.parseColor("#E8F5E9")),
-        Speciality(6, "Ophthalmology", 7, "👁️", Color.parseColor("#E0F7FA")),
-        Speciality(7, "Gastroenterology", 6, "🫀", Color.parseColor("#FBE9E7")),
-        Speciality(8, "Pediatrics", 14, "👶", Color.parseColor("#E8EAF6"))
+        Speciality(1, "Cardiology", 12, Color.parseColor("#FFEBEE"), R.drawable.cardiology),
+        Speciality(2, "Neurology", 8, Color.parseColor("#F3E5F5"), R.drawable.neurology),
+        Speciality(3, "Radiology", 11, Color.parseColor("#E3F2FD"), R.drawable.radiology),
+        Speciality(4, "Dentistry", 15, Color.parseColor("#FFF8E1"), R.drawable.dentistry),
+        Speciality(5, "Orthopedics", 9, Color.parseColor("#E8F5E9"), R.drawable.orthopedics),
+        Speciality(6, "Ophthalmology", 7, Color.parseColor("#E0F7FA"), R.drawable.ophthamology),
+        Speciality(7, "Gastroenterology", 6, Color.parseColor("#FBE9E7"), R.drawable.gastronologie),
+        Speciality(8, "Pediatrics", 14, Color.parseColor("#E8EAF6"), R.drawable.pediatrics)
     )
 
     fun getFavoriteDoctors(): List<Doctor> = doctors.filter { it.isFavorite }

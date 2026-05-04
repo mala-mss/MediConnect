@@ -12,5 +12,6 @@ data class Doctor(
     val email: String,
     val about: String,
     val emoji: String,
+    val imageRes: Int,
     var isFavorite: Boolean = false
 )

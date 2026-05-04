@@ -3,6 +3,7 @@ package com.mediconnect.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.mediconnect.R
@@ -15,7 +16,7 @@ class DoctorAdapter(
 ) : RecyclerView.Adapter<DoctorAdapter.DoctorViewHolder>() {
 
     inner class DoctorViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val tvAvatar: TextView = view.findViewById(R.id.tvAvatar)
+        val ivAvatar: ImageView = view.findViewById(R.id.ivAvatar)
         val tvDoctorName: TextView = view.findViewById(R.id.tvDoctorName)
         val tvSpeciality: TextView = view.findViewById(R.id.tvSpeciality)
         val tvDistance: TextView = view.findViewById(R.id.tvDistance)
@@ -30,7 +31,7 @@ class DoctorAdapter(
 
     override fun onBindViewHolder(holder: DoctorViewHolder, position: Int) {
         val doctor = doctors[position]
-        holder.tvAvatar.text = doctor.emoji
+        holder.ivAvatar.setImageResource(doctor.imageRes)
         holder.tvDoctorName.text = doctor.name
         holder.tvSpeciality.text = doctor.speciality
         holder.tvDistance.text = doctor.experience
